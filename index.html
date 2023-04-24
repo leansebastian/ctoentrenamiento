@@ -7,37 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro de Entrenamiento</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/servicios.js"></script>
+    <script defer src="js/dom.js"></script>
     <script src="js/compra.js"></script>
     <script src="js/index.js"></script>
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <h1>Centro de Entrenamiento Integral</h1>
-        <h2> Elegí la opción que se adapta a lo que estas buscando</h2>
+        <h2>Inicia el cambio que buscás con tan solo un click</h2>
+        <hr>
+        <input type="search" id="inputSearch" placeholder="Ingresa el servicio a buscar" class="">
     </header>
     <main>
-        <div>
-            <h3>Nuestros Servicios</h3>
-            <ul>
-                <li>(1) 🍀 OUTDOOR TRAINING</li>
-                <li>(2) 🖥️ ONLINE TRAINING</li>
-                <li>(3) 🥗 HEALTHY - NUTRI</li>
-                <li>(4) 📜 HEALTHY - RUTINA</li>
-                <li>(5) 🏋️ PROGRAMA HEALTHY FIT</li>
-                <li>(6) 🌍 PERSONALIZADO - ONLINE</li>
-                <li>(7) 🏡 PERSONALIZADO - DOMICILIO</li>
-            </ul>
-        </div>
-        <div class="CajaTexto textoBlanco">
-            <p> Ejecutar en consola de js = comprar para añadir a carrito</p>
-            <p> Ejecutar en consola de js = opcion de socio del gimnasio para obtener un descuento</p>
-
-        </div>
-
+        <div class="container" id="container">
+            
+        
 
     </main>
     <footer>
+        <hr>
         <p> Estudiante: Leandro Sebelli</p>
         <p>Comisión de JavaScript 39.490</p>
     </footer>

@@ -1,12 +1,3 @@
-const carrito = []
-
-const servicios = [{ imagen: '🍀', codigo: 1, tipo: 'Outdoor training', clase: '(pack 8 clases)', valor: 5000 },
-{ imagen: '🖥️', codigo: 2, tipo: 'Online training', clase: '(pack 8 clases)', valor: 6000 },
-{ imagen: '🥗', codigo: 3, tipo: 'Healthy-nutri', clase: '(plan nutricional)', valor: 4500 },
-{ imagen: '📜', codigo: 4, tipo: 'Healthy-rutina', clase: '(plan de entrenamiento)', valor: 6500 },
-{ imagen: '🏋️', codigo: 5, tipo: 'Programa Healthy Fit', clase: '(programa de 90 dias)', valor: 20000 },
-{ imagen: '🌍', codigo: 6, tipo: 'Personalizado-Online', clase: '(pack 4 clases)', valor: 10000 },
-{ imagen: '🏡', codigo: 7, tipo: 'Personalizado-Domicilio', clase: '(pack 4 clases)', valor: 12000 }]
 
 const mensajeInicial = "Selecciona el servicio por el código numérico:"
 
@@ -65,7 +56,6 @@ function comprar() {
         finalizarCompra()
     }
 }
-
 
 
 
