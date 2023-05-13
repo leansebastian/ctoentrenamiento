@@ -28,6 +28,7 @@ body {
     width: 100%;
     color: rgb(255, 255, 255);
     padding: 5px;
+   
 
 }
 
@@ -48,12 +49,15 @@ h2 {
 
 #inputSearch {
     width: 500px;
+    height: 40px;
     padding: 5px;
     margin: 5px;
-    background-color: aquamarine;
-    color:black
+    background-color: rgb(176, 223, 176);
+    color:rgb(0, 0, 0);
+         
 
 }
+
 
 footer {
     background-color: rgba(188, 143, 143, 0.206);
