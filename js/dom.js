@@ -1,9 +1,10 @@
-const carrito = []
+const carritoProductos = []
 const container = document.querySelector(".container")
 const totalCarrito = document.querySelector("span")
 const inputBuscar = document.querySelector("#inputSearch")
-const carritoProductos = recuperarCarrito() || []
+const carro =document.querySelector("btn-salida")
 const servicios=[]
+const btnCheckout = document.querySelector("div.btn-checkout")
 const URL = 'js/servicios.json'
 
 
@@ -37,6 +38,7 @@ function mostrarCardError() {
 function actualizarTotalServicios() {
     totalCarrito.textContent = carritoProductos.length
 }
+
 actualizarTotalServicios()
 
 function activarClickEnBotones() {
@@ -60,11 +62,33 @@ function activarClickEnBotones() {
                     style: {
                         background: "linear-gradient(to right, #50b08b, #36c23d)",
                     },
-                }).showToast();
+                }).showToast()        
+               finalizarCompra()
             })
         }
     }
 }
+
+
+
+function finalizarCompra() {
+
+    Swal.fire({
+        title: '¿Quieres finalizar la compra?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Confirmar',
+        denyButtonText: `Agregar servicios`,
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          Swal.fire('Felicitaciones, nos contactaremos a la brevedad')
+        } else if (result.isDenied) {
+          Swal.fire('Conocé todos nuestros servicios')
+        }
+      })
+    }
+
 
 function cargarProductos(array) {
     container.innerHTML = ""
@@ -87,12 +111,12 @@ inputSearch.addEventListener("keyup", (e) => {
 })
 
 function guardarCarrito() {
-    localStorage.setItem("carritoServicios", JSON.stringify(carrito))
+    localStorage.setItem("carritoServicios", JSON.stringify(carritoProductos))
 }
 
 function recuperarCarrito() {
     const carritoTemporal = JSON.parse(localStorage.getItem("carritoServicios")) || []
-    carrito.push(...carritoTemporal)
+    carritoProductos.push(...carritoTemporal)
 }
 
 servicios.length > 0 ? cargarProductos(servicios) : mostrarCardError()
@@ -104,4 +128,5 @@ function filtrarProductos() {
 
 inputBuscar.addEventListener("search", filtrarProductos)
 
-recuperarCarrito
+recuperarCarrito()
+
